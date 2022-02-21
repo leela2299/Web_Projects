@@ -9,7 +9,7 @@ a:hover {
 
 body{
   background-color: black;
-  font-family: 'Comfortaa';
+  font-family: Nunito,sans-serif;
 }
 
 .over-img{
@@ -22,8 +22,7 @@ body{
     font-size:40px;
     left:470px;
     top:120px;
-    /* font-family:sans-serif; */
-    font-family: 'Comfortaa';
+
 }
 
 
@@ -73,7 +72,7 @@ body{
   width:1360px;
   /* border: solid red; */
   margin-top:60px;
-  font-family: 'Comfortaa';
+  /* font-family: 'Comfortaa'; */
 }
 
 /* //---------------------------------------------- Section 2 .............................. */
@@ -97,7 +96,7 @@ body{
   /* border: solid 5px; */
   /* border-color:red; */
   display:inline-block;
-    font-family: 'Comfortaa';
+    /* font-family: 'Comfortaa'; */
 
 }
 
