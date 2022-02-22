@@ -36,58 +36,47 @@ async function fetchData() {
 
 
 //// -------- Section 2 -----------------------------------------------------------------------
-     function createSection2(g)
-     {
+
+
+         function createSection2(g)
+         {
            for(let i=0;i<g["section2"].length;i++) //creating image blocks
-           {
-              var onediv = document.createElement('div');
-              onediv.className = "section2_img_block";
-              document.getElementById("section2").appendChild(onediv);
-
-
+            {
+                        var onediv = document.createElement('div');
+                        onediv.className = "section2_block";
+                        document.getElementById("section2").appendChild(onediv);
             }
 
-            for(let i=0;i<g["section2"].length;i++) //creating text blocks
-            {
-               var onediv = document.createElement('div');
-               onediv.className = "section2_text_block";
-               document.getElementById("section2").appendChild(onediv);
+
+            for(let i=0;i<g["section2"].length;i++)
+                       {
 
 
-             }
+                          var myImage = document.createElement('img');
+                           myImage.src = g["section2"][i]["image"];
+                           myImage.classList.add("section2-img");
+                          document.querySelectorAll(".section2_block")[i].appendChild(myImage);
 
-             for(let i=0;i<g["section2"].length;i++)
-            {
+                          var h3 = document.createElement("h3");
+                          h3.className = "section2-text";
+                          var heading = g["section2"][i]["heading"];
+                          var h3_node = document.createTextNode(heading);
+                          h3.appendChild(h3_node);
+                          document.querySelectorAll(".section2_block")[i].appendChild(h3);
+
+                          var para = document.createElement("p");
+                          para.className = "section2-text";
+                          var myText = g["section2"][i]["text"];
+                          var node = document.createTextNode (myText);
+                          para.appendChild(node);
+                          document.querySelectorAll(".section2_block")[i].appendChild(para);
+
+                         
+                    }
+        }
 
 
-               var myImage = document.createElement('img');
-                myImage.src = g["section2"][i]["image"];
-                myImage.classList.add("section2-img");
-               document.querySelectorAll(".section2_img_block")[i].appendChild(myImage);
 
-               var h3 = document.createElement("h3");
-               h3.className = "section2-text";
-               var heading = g["section2"][i]["heading"];
-               var h3_node = document.createTextNode(heading);
-               h3.appendChild(h3_node);
-               document.querySelectorAll(".section2_text_block")[i].appendChild(h3);
-
-               var para = document.createElement("p");
-               para.className = "section2-text";
-               var myText = g["section2"][i]["text"];
-               var node = document.createTextNode (myText);
-               para.appendChild(node);
-               document.querySelectorAll(".section2_text_block")[i].appendChild(para);
-
-              // console.log(myText);
-
-               // var element = document.getElementById('element');
-               // element.classList.add('class-1');
-               // element.classList.add('class-2', 'class-3');
-               // element.classList.remove('class-3');
-
-         }
- }
 
 //-------------------------------------Section 3 -----------------------------------------------------
 
