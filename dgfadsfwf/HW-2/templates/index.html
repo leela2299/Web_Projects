@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+      body
+      {
+        background-color: #F6E7D8;
+      }
+  .main_box{
+    margin-left:450px;
+    margin-top:50px;
+    width:500px;
+    height:400px;
+
+  }
+  
+  .age
+  {
+    
+  }
+  
+  .weight
+  {
+    
+    
+  }
+
+  .result
+  {
+    margin-left:80px;
+  }
+  
+  .submit
+  {
+    margin-left:80px;
+  }  
+   table td {
+        font-weight:bold;
+        font-size:17px;
+     
+    }
+  
+  
+    input[type=submit]{
+      background-color:#676a9c;
+      border: none;
+      font-size:20px;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  
+  
+</style>
+
+  </head>
+  <body>
+    <div class="main_box">
+    <h1 style="color: #b00519">Blood Pressure Predictor </h1> 
+    <h3 style="color: #b00519">Fill out the form to get blood pressure estimate! </h3> 
+    
+    <form action="#" method="post">
+    <table>
+    <tr>
+      <td align="right"><p><label for="age">Age <span style="color:#ff0000">*</span></label><p></td>
+      <td align="left"><input type="number" id="age" name="age" value="enter the age in years" required title="hi" min="0" placeholder="Enter Age in years"></td>
+    </tr>
+    <tr>
+      <td align="right"><label for="weight">Weight <span style="color:#ff0000">*</span></label></td>
+      <td align="left"><input type="number" id="weight" name="weight" required title="hi" min="0" placeholder="Enter weight in kg"></td>
+    </tr>
+    
+  </table>
+    <div class="submit">
+           <p><input type="submit" value="calculate"></p>
+      </div>
+    </form> 
+
+    <div class="result">  
+      {% for i in l %}
+        <p><strong>{{i}}</strong></p>
+      {% endfor %} 
+     </div>
+
+
+    </div>  
+    
+  </body>
+</html>
